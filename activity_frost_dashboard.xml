@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060913">
+
+    <!-- Left Sidebar Navigation -->
+    <LinearLayout
+        android:id="@+id/leftSidebar"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="#0B132B"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_home_frost"
+            android:layout_marginBottom="20dp" />
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_settings_frost" />
+    </LinearLayout>
+
+    <!-- Top Header Bar -->
+    <RelativeLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_toRightOf="@id/leftSidebar"
+        android:paddingHorizontal="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❄️ FROST LAUNCHER"
+            android:textColor="#00F0FF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Account Badge Selector -->
+        <TextView
+            android:id="@+id/tvCurrentAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Select Account ▼"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <!-- Center Launch Area -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/leftSidebar"
+        android:layout_below="@id/topHeader"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnMainLaunch"
+            android:layout_width="220dp"
+            android:layout_height="55dp"
+            android:backgroundTint="#00F0FF"
+            android:text="LAUNCH GAME"
+            android:textColor="#060913"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
